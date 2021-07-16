@@ -1,7 +1,9 @@
 import React from 'react';
 import heart from './Red-Heart.png';
 import SelectedBeast from './SelectedBeast';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
+import {Card} from 'react-bootstrap';
 
 class HornedBeast extends React.Component {
   constructor(props) {
@@ -21,16 +23,18 @@ class HornedBeast extends React.Component {
 
   render() {
     return (
-      <div>
-        <SelectedBeast
-          title = {this.props.title}
-          image_url = {this.props.image_url}
-        />
-        <p>Title: {this.props.title}</p>
-        <p>Description: {this.props.description}</p>
-        <span>Like this picture? Click the heart. # of times favorited: {this.state.timesClicked}</span>
-        <img class="heart" src={heart} onClick={this.click} size="sm"></img>
-      </div>
+      <Card style={{ width: '50%', display: 'inline-block'}}>
+        <Card.Body>
+          <SelectedBeast
+            title = {this.props.title}
+            image_url = {this.props.image_url}
+          />
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          <span>Like this picture? Click the heart. # of times favorited: {this.state.timesClicked}</span>
+          <img class="heart" src={heart} onClick={this.click} size="sm"></img>
+        </Card.Body>
+      </Card>
     );
   }
 }

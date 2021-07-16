@@ -3,7 +3,7 @@ import Header from './header.js';
 import Footer from './footer.js';
 import Main from './main.js';
 import beastData from './data.json';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
   constructor(props) {

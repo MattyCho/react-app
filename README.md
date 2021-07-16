@@ -1,4 +1,6 @@
-# React State and Props
+# Horned Beast React App
+
+(Deployed page with Netlify](https://silly-austin-a51301.netlify.app/)
 
 ## Overview
 By the end of this week, you will create an application that displays images and information of horned animals. This application will allow you to filter the images by number of horns and chose your favorite image.
@@ -90,3 +92,14 @@ Then only the images matching the current set of characters should be displayed 
 - How are we implementing it?
 Create an input element to allow users to search for an image. It is up to you to decide if the user should be able to search by title, keyword, or both.
 Write a regular expression pattern to create a fuzzy search so that the results are narrowed down and displayed every time the user enters or removes a character from the input.
+
+### Feature 1. Filter by Numbers of Horns
+- Why are we implementing this feature?
+As a user, I want to be able to view the beasts by the number of horns
+- What are we going to implement?
+Given that a user is presented with filtering options
+When the user clicks on one option
+Then the images should be filtered accordingly
+- How are we implementing it?
+Using the Form component of react-bootstrap, build a drop down menu so that the user can choose to filter by number of horns.
+When the user chooses one of the options, the correct images should be displayed.
